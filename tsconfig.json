@@ -1,0 +1,22 @@
+{
+  "include": ["src", "@types"],
+  "compilerOptions": {
+    "target": "es2017",
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    /* paths - If you configure Snowpack import aliases, add them here. */
+    "paths": {},
+    /* noEmit - Snowpack builds (emits) files, not tsc. */
+    "noEmit": true,
+    /* LitElement - Add decorator support! */
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    /* Additional Options */
+    "strict": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "importsNotUsedAsValues": "error"
+  }
+}
