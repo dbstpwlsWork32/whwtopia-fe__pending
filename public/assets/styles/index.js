@@ -1,2 +1,2 @@
 require('normalize.css')
-require('./index.sass')
+require('./reset.scss')

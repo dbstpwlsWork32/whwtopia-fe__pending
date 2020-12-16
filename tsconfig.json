@@ -1,11 +1,15 @@
 {
-  "include": ["src", "@types"],
+  "include": ["@types", "src"],
   "compilerOptions": {
     "target": "es2017",
     "moduleResolution": "node",
-    "baseUrl": "./",
+    "baseUrl": "./public",
     /* paths - If you configure Snowpack import aliases, add them here. */
-    "paths": {},
+    "paths": {
+      "@/*": ["../src/*"],
+      "@images/*": ["./assets/images/*"],
+      "@coms/*": ["../src/components/*"]
+    },
     /* noEmit - Snowpack builds (emits) files, not tsc. */
     "noEmit": true,
     /* LitElement - Add decorator support! */
