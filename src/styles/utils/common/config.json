@@ -1,0 +1,13 @@
+{
+  "font": {
+    "root": "20px",
+    "base": "0.7rem",
+    "small-1": "0.6rem",
+    "title-1": "0.8rem"
+  },
+  "palette": {
+    "black": "#000",
+    "primary": "#7776FF",
+    "gray": "#999999"
+  }
+}

@@ -1,19 +1,20 @@
 import { injectGlobal } from '@emotion/css'
-import { FONT_KEY, parse } from '../utils/font'
+import { parse as fontParse } from '../utils/font'
+import colorParse from '../utils/palette'
 
 export default injectGlobal`
-  html {
-    font-size: ${FONT_KEY.root}px;
-  }
   :root {
-    ${parse.toCss('base')}
-    ${parse.toCss('small-1')}
-    ${parse.toCss('title-1')}
+    ${fontParse.setCssVar()}
+    ${colorParse.setCssVar()}
+  }
+
+  html {
+    font-size: var(${fontParse.getCssVar('root')}, 20px);
   }
 
   body {
     font-family: 'Noto Sans KR', sans-serif;
-    font-size: var(${parse.getCss('base')}, 14px);
+    font-size: var(${fontParse.getCssVar('base')}, 14px);
     font-weight: 400;
     background: #E5E5E5;
   }

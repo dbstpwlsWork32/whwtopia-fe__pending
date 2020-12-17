@@ -1,21 +1,12 @@
-import { font as FONT_KEY } from './config.json'
+import { font as FONT_JSON } from './common/config.json'
+import { Parse } from './common/Parse'
 
-const rem = (px: number): string => px/FONT_KEY.root + 'rem'
+const rem = (px: number): string => px / parseInt(FONT_JSON.root) + 'rem'
 
-const parse = {
-  getCss (key: keyof typeof FONT_KEY) {
-    return `--ft-${key}`
-  },
-  toCss (key: keyof typeof FONT_KEY) {
-    return `--ft-${key}: ${rem(FONT_KEY[key])};`
-  },
-  toKey (key: string) {
-    return key.replace('--ft-', '')
-  }
-} as const
+const parse = new Parse<typeof FONT_JSON>(FONT_JSON, '--ft')
 
 export {
+  rem as default,
   rem,
-  FONT_KEY,
   parse
 }
