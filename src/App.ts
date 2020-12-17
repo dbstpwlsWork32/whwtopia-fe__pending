@@ -1,8 +1,8 @@
-import logo from '@images/logo.png'
-import logo2x from '@images/logo@2x.png'
-
 import { css } from '@emotion/css'
 import { html, render } from 'lit-html'
+
+import logo from '@images/logo.png'
+import logo2x from '@images/logo@2x.png'
 
 const header = () => {
   const style = css`

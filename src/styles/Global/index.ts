@@ -14,6 +14,7 @@ export default injectGlobal`
   body {
     font-family: 'Noto Sans KR', sans-serif;
     font-size: var(${parse.getCss('base')}, 14px);
+    font-weight: 400;
     background: #E5E5E5;
   }
 `

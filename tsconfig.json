@@ -8,7 +8,8 @@
     "paths": {
       "@/*": ["../src/*"],
       "@images/*": ["./assets/images/*"],
-      "@coms/*": ["../src/components/*"]
+      "@coms/*": ["../src/components/*"],
+      "@atoms/*": ["../src/components/atoms/*"]
     },
     /* noEmit - Snowpack builds (emits) files, not tsc. */
     "noEmit": true,
