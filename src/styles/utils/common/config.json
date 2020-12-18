@@ -8,6 +8,9 @@
   "palette": {
     "black": "#000",
     "primary": "#7776FF",
-    "gray": "#999999"
+    "primary-1": "#4E41DB",
+    "white": "#fff",
+    "white-1": "#E5E5E5",
+    "white-2": "#999"
   }
 }

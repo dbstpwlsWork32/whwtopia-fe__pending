@@ -6,7 +6,6 @@ import logo2x from '@images/logo@2x.png'
 
 const header = () => {
   const style = css`
-    background-color: #4E41DB;
     padding: 0 20px;
     display: flex;
     height: 60px;
@@ -14,7 +13,7 @@ const header = () => {
   `
 
   return html`
-  <header class=${style}>
+  <header class="${style} c__bg-primary">
     <h1>
       <a href="/">
         <img
