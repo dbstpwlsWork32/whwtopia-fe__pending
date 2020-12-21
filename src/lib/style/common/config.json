@@ -12,5 +12,9 @@
     "white": "#fff",
     "white-1": "#E5E5E5",
     "white-2": "#999"
+  },
+  "resolution": {
+    "tablet": 1023,
+    "mobile": 767
   }
 }

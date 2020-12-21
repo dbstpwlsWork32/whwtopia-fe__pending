@@ -1,6 +1,6 @@
 import { injectGlobal } from '@emotion/css'
-import { parse as fontParse } from '../utils/font'
-import colorParse from '../utils/palette'
+import { parse as fontParse } from './lib/style/font'
+import colorParse from './lib/style/palette'
 
 export default injectGlobal`
   :root {
@@ -25,6 +25,7 @@ export default injectGlobal`
     font-weight: 400;
     color: var(--ft-base-cl);
     background: var(--bg-base);
+    line-height: 1.4em;
   }
 
   /* color modules */
@@ -36,5 +37,13 @@ export default injectGlobal`
   }
   .c__ft-sub {
     color: var(--ft-cl-sub);
+  }
+
+  /* default styles */
+  .s__radius-4 {
+    border-radius: 4px;
+  }
+  .s__radius-10 {
+    border-radius: 10px;
   }
 `

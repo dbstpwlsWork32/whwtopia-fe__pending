@@ -3,6 +3,11 @@
    License: none (public domain)
 */
 
+%font-color {
+	font: inherit;
+	color: inherit;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -15,12 +20,35 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+time, mark, audio, video, input, button, select {
 	margin: 0;
 	padding: 0;
 	border: 0;
 	box-sizing: border-box;
 	font-size: 100%;
-	font: inherit;
 	vertical-align: baseline;
+	line-height: inherit;
+	@extend %font-color;
+}
+
+svg {
+	@extend %font-color;
+}
+
+button {
+	cursor: pointer;
+	outline: none;
+}
+
+input, select {
+	width: 100%;
+	&::placeholder {
+		@extend %font-color;
+		opacity: .7;
+	}
+}
+
+input, select, button {
+	background: none;
+	outline: none;
 }

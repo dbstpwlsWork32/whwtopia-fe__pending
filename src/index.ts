@@ -1,2 +1,2 @@
-import '@/styles/Global'
+import '@/GlobalStyle'
 import './App'
