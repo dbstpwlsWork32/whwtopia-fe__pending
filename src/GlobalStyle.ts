@@ -29,21 +29,21 @@ export default injectGlobal`
   }
 
   /* color modules */
-  .c__bg-primary {
+  .c_bg-primary {
     background: var(--bg-primary)
   }
-  .c__ft-primary {
+  .c_ft-primary {
     color: var(--ft-cl-primary);
   }
-  .c__ft-sub {
+  .c_ft-sub {
     color: var(--ft-cl-sub);
   }
 
   /* default styles */
-  .s__radius-4 {
+  .s_radius-4 {
     border-radius: 4px;
   }
-  .s__radius-10 {
+  .s_radius-10 {
     border-radius: 10px;
   }
 `

@@ -1,2 +1,3 @@
 import '@/GlobalStyle'
-import './App'
+import './sideEffect'
+import '@/App'

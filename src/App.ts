@@ -53,7 +53,7 @@ const header = () => {
   `
 
   return html`
-  <header class="${style} c__bg-primary">
+  <header class="${style} c_bg-primary">
     <h1 class="logo">
       <a href="/">
         <img
@@ -66,7 +66,7 @@ const header = () => {
         />
       </a>
     </h1>
-    <div class="search-box s__radius-4">
+    <div class="search-box s_radius-4">
       <input class="search" type="text" placeholder="Search" />
       <button class="button">
         ${makeIcon(faSearch)}
@@ -82,7 +82,7 @@ const root = html`
 <div id="app">
   ${header()}
   <main>
-    <button is="cs-btn">asdasd</button>
+    <button is="ce-button">asdasd</button>
   </main>
   <footer>
   </footer>
