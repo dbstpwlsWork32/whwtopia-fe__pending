@@ -1,6 +1,6 @@
 import { injectGlobal } from '@emotion/css'
-import { parse as fontParse } from './lib/style/font'
-import colorParse from './lib/style/palette'
+import { parse as fontParse } from '@/lib/style/font'
+import colorParse from '@/lib/style/palette'
 
 export default injectGlobal`
   :root {

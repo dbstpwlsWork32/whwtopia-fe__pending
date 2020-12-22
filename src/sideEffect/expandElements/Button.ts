@@ -11,7 +11,7 @@ class Button extends HTMLButtonElement {
     return div
   }
   ce_rippleEffect() {
-    if (this.ce_maked > 5) return false
+    if (this.ce_maked > 4) return false
     this.ce_maked++
 
     this.appendChild(this.ce_rippleDom)
