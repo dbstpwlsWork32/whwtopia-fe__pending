@@ -1,1 +1,2 @@
 import './RippleButton'
+import './router'
