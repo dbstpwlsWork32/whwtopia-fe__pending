@@ -1,5 +1,5 @@
 import { css } from '@emotion/css'
-import { html, render } from 'lit-html'
+import { html } from 'lit-html'
 
 import makeIcon from '@/lib/getIcon'
 
@@ -7,7 +7,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import logo from '@images/logo.png'
 import logo2x from '@images/logo@2x.png'
 
-const header = () => {
+export default () => {
   const style = css`
     padding: 0 20px;
     display: flex;
@@ -77,18 +77,3 @@ const header = () => {
   </header>
   `
 }
-
-const root = html`
-<div id="app">
-  ${header()}
-  <main>
-    <nav is="ce-router">
-      <a is="ce-router-link" href="./example/asdasd/asdasd">asdadsasd</a>
-    </nav>
-  </main>
-  <footer>
-  </footer>
-</div>
-`
-
-render(root, document.body)
