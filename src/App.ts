@@ -68,7 +68,7 @@ const header = () => {
     </h1>
     <div class="search-box s_radius-4">
       <input class="search" type="text" placeholder="Search" />
-      <button class="button">
+      <button class="button" is="ce-button">
         ${makeIcon(faSearch)}
       </button>
     </div>
@@ -82,7 +82,6 @@ const root = html`
 <div id="app">
   ${header()}
   <main>
-    <button is="ce-button">asdasd</button>
   </main>
   <footer>
   </footer>
