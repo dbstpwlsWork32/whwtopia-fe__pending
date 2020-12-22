@@ -16,5 +16,8 @@
   "resolution": {
     "tablet": 1023,
     "mobile": 767
+  },
+  "animation": {
+    "medium": ".6s"
   }
 }

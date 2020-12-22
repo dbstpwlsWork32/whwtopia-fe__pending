@@ -1,11 +1,13 @@
 import { injectGlobal } from '@emotion/css'
 import { parse as fontParse } from '@/lib/style/font'
 import colorParse from '@/lib/style/palette'
+import aniParse from '@/lib/style/animation'
 
 export default injectGlobal`
   :root {
     ${fontParse.setCssVar()}
     ${colorParse.setCssVar()}
+    ${aniParse.setCssVar()}
 
     --bg-base: var(${colorParse.getCssVar('white-1')}, #E5E5E5);
     --bg-primary: var(${colorParse.getCssVar('primary-1')}, #4E41DB);
@@ -56,7 +58,7 @@ export default injectGlobal`
       border-radius: 50%;
       position: absolute;
       background: currentcolor;
-      animation: default-ripple .6s alternate;
+      animation: default-ripple var(${aniParse.getCssVar('medium')}) alternate;
       opacity: .6;
     }
   }
