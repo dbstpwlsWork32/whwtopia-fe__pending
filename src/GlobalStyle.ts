@@ -46,4 +46,29 @@ export default injectGlobal`
   .s_radius-10 {
     border-radius: 10px;
   }
+
+  /* custom elements */
+  button[is="ce-button"] {
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+
+    padding: 20px;
+    background: red;
+
+    .js_ripple {
+      transform: scale(.4);
+      border-radius: 50%;
+      position: absolute;
+      background: #00000050;
+      animation: default-ripple .6s alternate;
+    }
+  }
+
+  @keyframes default-ripple {
+    to {
+      transform: scale(4);
+      opacity: 0;
+    }
+  }
 `
