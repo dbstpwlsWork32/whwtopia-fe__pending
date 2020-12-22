@@ -1,4 +1,4 @@
-import getRippleDom from '@coms/ripple'
+import getRippleDom from '@/components/Ripple'
 
 class Button extends HTMLButtonElement {
   constructor() {
