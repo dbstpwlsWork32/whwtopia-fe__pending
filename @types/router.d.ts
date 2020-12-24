@@ -1,9 +1,12 @@
 interface RouteChangeParams {
   path: string
 }
-interface EventRouteChange extends Event, RouteChangeParams {
+interface EventRouteChange extends CustomEvent<RouteChangeParams> {
 }
 
-interface RouterViewer extends HTMLElement {
-  viewChange: () => void
+interface RouterStructure {
+  [path: string]: {
+    view?: () => void,
+    fallback?: () => void
+  }
 }

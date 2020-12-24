@@ -1,15 +1,11 @@
 class Nav extends HTMLElement {
-  protected viewer: RouterViewer
-
-  constructor(viewer: RouterViewer) {
+  constructor() {
     super()
-    this.viewer = viewer
     this.addEventListener('routeChange', this.handleRouterChange as EventListener)
   }
 
   handleRouterChange(e: EventRouteChange) {
     e.stopPropagation()
-    this.viewer.viewChange()
   }
 
   disconnectedCallback() {

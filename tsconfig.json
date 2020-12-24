@@ -2,6 +2,7 @@
   "include": ["@types", "src"],
   "compilerOptions": {
     "target": "es2017",
+    "module": "esnext",
     "moduleResolution": "node",
     "baseUrl": "./public",
     /* paths - If you configure Snowpack import aliases, add them here. */
