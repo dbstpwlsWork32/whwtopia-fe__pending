@@ -1,3 +1,3 @@
 import '@/GlobalStyle'
-import '@/sideEffect'
+import '@/customElements'
 import '@/App'

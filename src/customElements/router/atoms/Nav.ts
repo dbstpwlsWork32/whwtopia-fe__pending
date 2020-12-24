@@ -1,15 +1,15 @@
-interface EventRouteChange extends Event {
-  pathname: string
-}
-
 class Nav extends HTMLElement {
-  constructor() {
+  protected viewer: RouterViewer
+
+  constructor(viewer: RouterViewer) {
     super()
+    this.viewer = viewer
     this.addEventListener('routeChange', this.handleRouterChange as EventListener)
   }
 
-  handleRouterChange(e: EventRouteChange ) {
+  handleRouterChange(e: EventRouteChange) {
     e.stopPropagation()
+    this.viewer.viewChange()
   }
 
   disconnectedCallback() {

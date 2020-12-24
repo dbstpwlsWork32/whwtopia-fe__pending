@@ -9,10 +9,10 @@ class Anchor extends HTMLAnchorElement {
 
     const { pathname } = new URL(this.href)
 
-    const routerEvent = new CustomEvent('routeChange', {
+    const routerEvent = new CustomEvent<RouteChangeParams>('routeChange', {
       bubbles: true,
       detail: {
-        pathname
+        path: pathname
       }
     })
 

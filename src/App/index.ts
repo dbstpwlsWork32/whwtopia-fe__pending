@@ -9,6 +9,8 @@ const root = html`
     <nav is="ce-router">
       <a is="ce-router-link" href="./example/asdasd/asdasd">asdadsasd</a>
     </nav>
+
+    <router-view></router-view>
   </main>
   <footer>
   </footer>
