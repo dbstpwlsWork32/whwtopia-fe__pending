@@ -5,10 +5,12 @@ interface EventRouteChange extends CustomEvent<RouteChangeParams> {
 }
 
 interface RouterStructure {
-  routes: {
-    [path: string]: {
-      view?: () => Promise<any> | any
+  routes: [
+    {
+      path: RegExp | string,
+      view?: () => Promise<any> | any,
+      exact?: boolean
     }
-  }
+  ],
   fallback: () => Promise<any> | any
 }
