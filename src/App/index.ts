@@ -1,5 +1,4 @@
 import { html, render } from 'lit-html'
-// import type { NodePart } from 'lit-html'
 
 import Router from '@/lib/router'
 
@@ -24,7 +23,7 @@ const template = html`
   ${header()}
   <main>
     <nav is="ce-router" @routeChange=${router.routeLinkClick.bind(router)}>
-      <a is="ce-router-link" href="/example/asdasd/asdasd">ex</a>
+      <a is="ce-router-link" href="/example/home">ex</a>
       <a is="ce-router-link" href="/">home</a>
     </nav>
 

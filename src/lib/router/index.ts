@@ -1,6 +1,14 @@
 import type { TemplateResult } from 'lit-html'
 import { render } from 'lit-html'
 
+
+// 흠;;
+const historyList = []
+
+window.addEventListener('popstate', () => {
+  historyList.push()
+})
+
 class Router {
   protected router: RouterStructure
   protected containerQuery: string
@@ -11,8 +19,6 @@ class Router {
 
     const { pathname } = new URL(window.location.href)
     this.viewChange(pathname)
-
-    window.addEventListener('popstate', this.handlePopstate.bind(this))
   }
 
   protected async getViews (path: string) {
@@ -34,18 +40,10 @@ class Router {
     return resolveView
   }
 
-  protected handlePopstate() {
-    const { pathname } = new URL(window.location.href)
-    this.viewChange(pathname)
-  }
-
   protected async viewChange (path: string) {
     const container = document.querySelector(this.containerQuery)
-    if (!container) {
-      window.removeEventListener('popstate', this.handlePopstate.bind(this))
-      return false
-    }
-    
+    if (!container) return false
+
     const currentRoute = await this.getViews(path)
     render(currentRoute, container)
   }
