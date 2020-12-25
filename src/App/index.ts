@@ -1,27 +1,41 @@
 import { html, render } from 'lit-html'
+import type { TemplateResult } from 'lit-html'
+
+import routerGetHelper from '@/lib/router'
 
 import header from './Header'
 
-const router: RouterStructure = {
-  '/': {
-    view: () => import('@/views/Home')
-  }
+const getByRouter = routerGetHelper({
+  routes: {
+    '/': {
+      view: () => import('@/views/Home')
+    }
+  },
+  fallback: () => import('@/views/404')
+})
+
+const routeChange = async (e: EventRouteChange) => {
+  const view = await getByRouter(e.detail.path)
+  _render(view)
 }
 
-const abc = (e: EventRouteChange) => {
+const _render = (routeTemplate: TemplateResult) => {
+  const template = html`
+    ${header()}
+    <main>
+      <nav is="ce-router" @routeChange=${routeChange}>
+        <a is="ce-router-link" href="/example/asdasd/asdasd">ex</a>
+      </nav>
+
+      ${routeTemplate}
+    </main>
+    <footer>
+    </footer>
+  `
+
+  render(template, document.body)
 }
 
-const root = html`
-  ${header()}
-  <main>
-    <nav is="ce-router" @routeChange=${abc}>
-      <a is="ce-router-link" href="./example/asdasd/asdasd">ex</a>
-    </nav>
+import home from '@/views/Home'
 
-    <router-view></router-view>
-  </main>
-  <footer>
-  </footer>
-`
-
-render(root, document.body)
+_render(home)
